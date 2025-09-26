@@ -15,5 +15,4 @@ public class ExceptionDemo {
             System.out.println("Always runs");
         }
     }
-
 }
