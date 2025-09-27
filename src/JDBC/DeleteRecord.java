@@ -1,10 +1,11 @@
+package JDBC;
 import java.sql.*;
 
 public class DeleteRecord {
     public static void main(String[] args) {
         try {
             //Establishing the connection
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/teacher1", "root", "root");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/teachers", "root", "root");
             if (con != null) {
                 System.out.println("Connect to the database");
 
@@ -13,10 +14,10 @@ public class DeleteRecord {
 
                 //Print Values before delete
                 System.out.println("Values before delete:");
-                displayRecord(stmt,"Fatima ji");
+                displayRecord(stmt,"Zabbi ji");
 
                 //Delete the record
-                int rowsAffected = stmt.executeUpdate("DELETE FROM teachers1 WHERE name='Fatima ji'");
+                int rowsAffected = stmt.executeUpdate("DELETE FROM teachers1 WHERE name='Zabbi ji'");
 
                 if (rowsAffected > 0){
                     System.out.println("Record deleted successfully!");
