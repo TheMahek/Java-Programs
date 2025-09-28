@@ -1,7 +1,6 @@
 package JDBC;
 
 import com.mysql.cj.protocol.Resultset;
-
 import java.sql.*;
 public class FirstDB {
     public static void main(String[] args) {
@@ -25,7 +24,6 @@ public class FirstDB {
             while (rs.next()){
                 String dbName = rs.getString(1);
                 System.out.println("📌" + dbName);
-
             }
             con.close();
         }catch (Exception e){
